@@ -11,6 +11,7 @@ LINE = (
 
 
 def main() -> None:
+    assert 1 <= len(LINE) <= 200, "the judge accepts a sentence of 1-200 characters"
     out = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
     out.mkdir(parents=True, exist_ok=True)
     (out / "entry.txt").write_text(LINE, encoding="utf-8")
